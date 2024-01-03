@@ -1,39 +1,12 @@
 import React from 'react'
-import styled from 'styled-components';
+import {Mask, ModalBody, ContentB} from '../../styled/StyledModal'
 
-const MaskB = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(221, 221, 221, 0.8);
-`
-
-const ModalBodyB = styled.div`
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`
-
-const ContentB = styled.div`
-    left: 50%;
-    top: 50%;
-    border-radius: 12px;
-    box-sizing: border-box;
-    padding: 24px;
-    background-color: rgb(255, 255, 255);
-    width: 300px;
-    height: 200px;
-
-`
 
 function ModalB({modalBOpen}) {
     return (
         <div>
-            <MaskB onClick={()=> modalBOpen()}></MaskB>
-            <ModalBodyB>
+            <Mask onClick={()=> modalBOpen()}></Mask>
+            <ModalBody>
                 <ContentB>
                     <div>닫기 버튼 1개가 있고,<br/> 외부 영역을 누르면 모달이 닫혀요.</div>
                     <button onClick={()=> modalBOpen()}
@@ -50,7 +23,7 @@ function ModalB({modalBOpen}) {
                     >X
                     </button>
                 </ContentB>
-            </ModalBodyB>
+            </ModalBody>
         </div>
     )
 }
