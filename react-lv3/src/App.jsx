@@ -48,8 +48,10 @@ function App() {
   const refPrice = useRef("")
 
   useEffect(() => {
-    if (price.split(',').join('').length % 3 === 0 && price.length > 0 && !price.endsWith(',')) {
+    if (price.split(',').join('').length % 3 === 0 && price.length > 0 && !price.endsWith(',')&& !isNaN(Number(price.split(',').join('')))) {
       setPrice(refPrice.current.value = refPrice.current.value + ",");
+    }else if(isNaN(Number(price.split(',').join('')))){
+      alert("숫자가 아닙니다. 지워주세요")
     }
   }, [price])
 
