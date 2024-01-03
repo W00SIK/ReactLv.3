@@ -18,6 +18,7 @@ function App() {
     }
   }
 
+  // Modal Form
   const ColorModal = ["rgb(250, 177, 160)", "rgb(85, 239, 196)"]
 
   const getNameModal = (color) => {
